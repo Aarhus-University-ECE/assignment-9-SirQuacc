@@ -25,6 +25,7 @@ typedef struct stack
   struct stack *next;
 } stack;
 
+void initStack (stack* topp); //Added an initialize function for the stack
 
 stack *push (stack * topp, node * node);
 
@@ -32,6 +33,6 @@ bool isEmpty (stack * topp);
 
 node *top (stack * topp);
 
-stack *pop (stack * topp);
+stack *pop (stack ** topp); //Double pointer to edit the input pointer
 
 void print_stack (stack * topp);
