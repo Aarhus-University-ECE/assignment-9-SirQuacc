@@ -25,9 +25,9 @@ void DFT (node * root)
     print_node(popped->node); //Print the visited (popped) node's value.
     if(popped->node->rchild != NULL) mainStack = push(mainStack, popped->node->rchild); //If there is a right child, add this to the stack
     if(popped->node->lchild != NULL) mainStack = push(mainStack, popped->node->lchild); //If there is a left child, add this to the stack
+    free(popped); // Free stack-node, clean-up.
   }
   printf("\n");
- 
 }
 
 node *make_node (int num, node * left, node * right)
@@ -40,9 +40,15 @@ node *make_node (int num, node * left, node * right)
 	return new; //return pointer to new node
 }
 
-void free_node (node * p) 
+void free_node (node * p) //free a given node, and its children
 {
-  
+  if(p->rchild != NULL){
+    free_node(p->rchild);
+  }
+  if(p->lchild != NULL){
+    free_node(p->lchild);
+  }
+  free(p);
 }
 
 void print_node (node * p)
