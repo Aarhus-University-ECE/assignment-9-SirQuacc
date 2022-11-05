@@ -52,6 +52,7 @@
 \section{}
 \includegraphics[width=\linewidth, keepaspectratio=true]{task1}
 \vspace{2pt}\\
+<<<<<<< HEAD
 In the image below I've drawn a schematic of how the runtime stack evolves as the function calls upon itself. It will start returning
 values to the previous functions once it reaches any base case, and a recursion branch ends. Each box
 represents a new function call, i.e. a new stack in the runtime.
@@ -62,6 +63,10 @@ The timeline runs left to right.
 \end{center}
 
 \pagebreak
+=======
+
+
+>>>>>>> 04f9c09e1bf9e5a166688fda846a0daa9d26f25c
 \section{}
 \includegraphics[width=\linewidth, keepaspectratio=true]{task2}
 \vspace{2pt}
@@ -76,8 +81,12 @@ Below is the recursive function, it can also be found in sum.c
         else return a[n-1] + sum(a, n-1); //Recursively ask for the sum of the next number, and add it to the current
     }
 \end{lstlisting}
+<<<<<<< HEAD
 
 
+=======
+\pagebreak
+>>>>>>> 04f9c09e1bf9e5a166688fda846a0daa9d26f25c
 \section{}
 \includegraphics[width=\linewidth, keepaspectratio=true]{task3} 
 The code is seen below and can be found in search.c
@@ -90,15 +99,24 @@ The code is seen below and can be found in search.c
         }
         if(x == a[n-1]){ //Recusively check with linear search if x is equal to any element in the array of length n.
             return true;
+<<<<<<< HEAD
         } else rethurn search(a, n-1, x);
+=======
+        } else return search(a, n-1, x);
+>>>>>>> 04f9c09e1bf9e5a166688fda846a0daa9d26f25c
     }
 \end{lstlisting}
 \vspace{1cm}
 
 \pagebreak
+<<<<<<< HEAD
 \section{}
 \includegraphics[width=\linewidth, keepaspectratio=true]{task4}
 Below is my code for this function, it can also be found in dfs.c
+=======
+\includegraphics[width=\linewidth, keepaspectratio=true]{task4}
+Below is my code for this function, it can of course also be found in dfs.c
+>>>>>>> 04f9c09e1bf9e5a166688fda846a0daa9d26f25c
 \begin{lstlisting}
     void DFT (node * root)
     {
